@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import { AgregarCategoria } from './componentes/AgregarCategoria';
 
 function App() {
+
+  const [categorias, setCategorias] = useState(['Allegra','Bruno','Emmanuel'])
+
+  const add = () =>{
+    setCategorias([...categorias,'Macarena'])
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Gif App</h1>
+      <AgregarCategoria setCategorias={setCategorias} />
+      <button onClick={add}>Agregar</button>
+        <ol>
+          {
+            categorias.map(categoria=> {
+              return <li key={categoria}>{categoria}</li>
+            })
+          }
+        </ol>
+
+ 
     </div>
   );
 }
