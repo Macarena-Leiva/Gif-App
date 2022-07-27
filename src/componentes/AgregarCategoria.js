@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export const AgregarCategoria = ({setCategorias}) => {                      
-const[valorInput, setValor]=useState('Ingrese un texto');  //valor inicial en input
+const[valorInput, setValor]=useState('');  //valor inicial en input
 
 const manejadorCambioInput = (e) => {
     setValor(e.target.value)  //para manejar cuando hay un cambio en el input

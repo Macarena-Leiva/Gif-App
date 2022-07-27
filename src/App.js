@@ -6,15 +6,15 @@ function App() {
 
   const [categorias, setCategorias] = useState(['Allegra','Bruno','Emmanuel'])
 
-  const add = () =>{
+ /*  const add = () =>{
     setCategorias([...categorias,'Macarena'])
-  }
+  } */    // agrega macarena a la lista
 
   return (
     <div className="App">
       <h1>Gif App</h1>
       <AgregarCategoria setCategorias={setCategorias} />
-      <button onClick={add}>Agregar</button>
+       {/* <button onClick={add}>Agregar</button> //al dispararse el evento se agrega a la lista */} 
         <ol>
           {
             categorias.map(categoria=> {
