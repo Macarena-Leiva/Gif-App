@@ -12,7 +12,7 @@ const manejoSubmit = (e) =>{
     e.preventDefault()     // para prevenir el comportamiento por defecto del navegador
             //trim()Borra los espacios que pueda tener antes y despues
     if(valorInput.trim().length > 2){ //validacion para que se inserte en la lista solo si se escriben mas de 2 caracteres
-    setCategorias(cate => [...cate, valorInput]) //se inserta nuevo valor del input en la lista del componente app
+    setCategorias(cate => [valorInput, ...cate]) //se inserta nuevo valor del input en la lista del componente app
     setValor(''); //Al hacer enter en el valor se borra para ingresar uno nuevo
 }
     console.log('Submit listo')

@@ -5,7 +5,7 @@ import {ColeccionGif} from './componentes/ColeccionGif'
 
 function App() {
 
-  const [categorias, setCategorias] = useState(['Allegra'])
+  const [categorias, setCategorias] = useState([])
 
  /*  const add = () =>{
     setCategorias([...categorias,'Macarena'])
