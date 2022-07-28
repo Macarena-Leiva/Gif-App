@@ -20,7 +20,7 @@ const manejoSubmit = (e) =>{
 
   return (
     <form onSubmit={manejoSubmit}>
-    <h2>{valorInput}</h2>  {/* para ver el cambio al ultimo valor actualizado que se ingresa por input */}
+    {/* <h2>{valorInput}</h2> */}  {/* para ver el cambio al ultimo valor actualizado que se ingresa por input */}
 
     <input 
     type='text' 

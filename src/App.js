@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import { AgregarCategoria } from './componentes/AgregarCategoria';
+import {ColeccionGif} from './componentes/ColeccionGif'
 
 function App() {
 
-  const [categorias, setCategorias] = useState(['Allegra','Bruno','Emmanuel'])
+  const [categorias, setCategorias] = useState(['Allegra'])
 
  /*  const add = () =>{
     setCategorias([...categorias,'Macarena'])
@@ -17,9 +18,13 @@ function App() {
        {/* <button onClick={add}>Agregar</button> //al dispararse el evento se agrega a la lista */} 
         <ol>
           {
-            categorias.map(categoria=> {
-              return <li key={categoria}>{categoria}</li>
-            })
+            categorias.map(categoria=> (
+              <ColeccionGif 
+              key={categoria}
+              categoria={categoria} />
+             
+            )
+            )
           }
         </ol>
 
